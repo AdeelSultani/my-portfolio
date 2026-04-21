@@ -1,0 +1,22 @@
+.footer {
+  background: #080808;
+  text-align: center;
+  padding: 30px 8%;
+  border-top: 1px solid #1e1e1e;
+}
+
+.footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer span {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.year {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #444;
+}
