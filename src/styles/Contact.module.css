@@ -156,3 +156,14 @@
     grid-template-columns: 1fr;
   }
 }
+a.infoItem {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+a.infoItem:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  transform: translateX(6px);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
+}

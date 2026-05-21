@@ -9,20 +9,23 @@ function Contact() {
       </p>
       <div className={styles.contactGrid}>
         <div className={`${styles.info} reveal-left`}>
-          <div className={styles.infoItem}>
+
+          <a href="mailto:adeelsultani68@gmail.com" className={styles.infoItem}>
             <span className={styles.icon}>📧</span>
             <div>
               <strong>Email</strong>
               <p>adeelsultani68@gmail.com</p>
             </div>
-          </div>
-          <div className={styles.infoItem}>
+          </a>
+
+          <a href="tel:03029334967" className={styles.infoItem}>
             <span className={styles.icon}>📞</span>
             <div>
               <strong>Contact Number</strong>
               <p>03029334967</p>
             </div>
-          </div>
+          </a>
+
           <div className={styles.infoItem}>
             <span className={styles.icon}>📍</span>
             <div>
@@ -30,24 +33,23 @@ function Contact() {
               <p>Rawalpindi, Pakistan</p>
             </div>
           </div>
-          <div className={styles.infoItem}>
+
+          <a href="https://www.linkedin.com/in/adeel-sultani-b7996b31b/" target="_blank" rel="noreferrer" className={styles.infoItem}>
             <span className={styles.icon}>💼</span>
             <div>
               <strong>LinkedIn</strong>
-              <a href="https://www.linkedin.com/in/adeel-sultani-b7996b31b/" target="_blank" rel="noreferrer">
-                adeel-sultani
-              </a>
+              <p>adeel-sultani</p>
             </div>
-          </div>
-          <div className={styles.infoItem}>
+          </a>
+
+          <a href="https://github.com/AdeelSultani" target="_blank" rel="noreferrer" className={styles.infoItem}>
             <span className={styles.icon}>🐙</span>
             <div>
               <strong>GitHub</strong>
-              <a href="https://github.com/AdeelSultani" target="_blank" rel="noreferrer">
-                AdeelSultani
-              </a>
+              <p>AdeelSultani</p>
             </div>
-          </div>
+          </a>
+
         </div>
         <form
           className={`${styles.form} reveal-right`}
