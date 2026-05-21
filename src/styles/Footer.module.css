@@ -1,22 +1,16 @@
 .footer {
-  background: #080808;
-  text-align: center;
+  background: rgba(5, 5, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(124, 58, 237, 0.15);
   padding: 30px 8%;
-  border-top: 1px solid #1e1e1e;
+  text-align: center;
 }
 
 .footer p {
-  color: #666;
+  color: #555;
   font-size: 0.9rem;
 }
 
 .footer span {
   color: #7c3aed;
-  font-weight: 600;
-}
-
-.year {
-  margin-top: 6px;
-  font-size: 0.8rem;
-  color: #444;
 }

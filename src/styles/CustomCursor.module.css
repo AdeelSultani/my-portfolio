@@ -1,0 +1,60 @@
+/* Default cursor chhupa do */
+* {
+  cursor: none !important;
+}
+
+/* Chota dot — bilkul cursor ki jagah */
+.dot {
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+/* Bada circle — peeche peeche aata hai */
+.circle {
+  position: fixed;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200, 200, 200, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+  z-index: 99998;
+  transition: width 0.3s ease, height 0.3s ease,
+              top 0.3s ease, left 0.3s ease,
+              border-color 0.3s ease, background 0.3s ease;
+  will-change: transform;
+}
+
+/* Hover pe circle bada aur purple ho jaye */
+.circle.hovered {
+  top: -28px;
+  left: -28px;
+  width: 56px;
+  height: 56px;
+  border-color: rgba(124, 58, 237, 0.6);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Mobile pe cursor wapis normal kar do */
+@media (hover: none) {
+  * {
+    cursor: auto !important;
+  }
+
+  .dot,
+  .circle {
+    display: none;
+  }
+}

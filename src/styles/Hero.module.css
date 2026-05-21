@@ -5,32 +5,90 @@
   justify-content: center;
   padding: 100px 8% 60px;
   gap: 60px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* ── Image LEFT ── */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+  animation: blobPulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+  bottom: -50px;
+  left: -50px;
+  border-radius: 50%;
+  animation: blobPulse 10s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+@keyframes blobPulse {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  33% { transform: scale(1.1) translate(20px, -20px); }
+  66% { transform: scale(0.9) translate(-10px, 10px); }
+}
+
 .imageWrapper {
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #7c3aed, #a855f7, #7c3aed);
+  animation: rotateBorder 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .profileImg {
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  border: 4px solid #7c3aed;
+  border: 5px solid #0a0a0f;
   display: block;
+  transition: transform 0.4s ease;
 }
 
-/* ── Text RIGHT ── */
+.profileImg:hover {
+  transform: scale(1.03);
+}
+
 .textContent {
   max-width: 560px;
+  position: relative;
+  z-index: 1;
 }
 
 .greeting {
   font-size: 1.1rem;
   color: #7c3aed;
   margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.2s forwards;
 }
 
 .name {
@@ -39,14 +97,21 @@
   color: #ffffff;
   line-height: 1.1;
   margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.4s forwards;
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .role {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #7c3aed;
+  color: #a855f7;
   margin-bottom: 20px;
-  border-bottom: none;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.5s forwards;
 }
 
 .role::after {
@@ -58,27 +123,53 @@
   color: #aaa;
   margin-bottom: 32px;
   line-height: 1.8;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.6s forwards;
 }
 
 .buttons {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .btnPrimary {
-  background: #7c3aed;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
   color: #fff;
   padding: 12px 28px;
   border-radius: 8px;
   font-weight: 600;
-  transition: background 0.2s, transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.4s ease;
 }
 
 .btnPrimary:hover {
-  background: #6d28d9;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+}
+
+.btnPrimary:hover::before {
+  left: 100%;
 }
 
 .btnSecondary {
@@ -87,16 +178,19 @@
   padding: 12px 28px;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.2s;
+  transition: all 0.3s;
   display: inline-block;
+  backdrop-filter: blur(8px);
+  background: rgba(124, 58, 237, 0.05);
 }
 
 .btnSecondary:hover {
-  background: #7c3aed;
-  color: #fff;
+  background: rgba(124, 58, 237, 0.15);
+  color: #d8b4fe;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
 }
 
-/* ── Mobile ── */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
