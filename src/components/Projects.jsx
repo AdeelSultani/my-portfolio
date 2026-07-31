@@ -48,7 +48,7 @@ function Projects() {
                 <button className={styles.demoBtn} onClick={() => openModal(project)}>
                   🖼 View Screenshots
                 </button>
-                <a href={project.github} target="_blank" rel="noreferrer" className={styles.githubLink}>
+                <a href={project.githubLink} target="_blank" rel="noreferrer" className={styles.githubLink}>
                   GitHub →
                 </a>
               </div>

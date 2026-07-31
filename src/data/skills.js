@@ -2,6 +2,7 @@ const skills = [
   { name: "Flutter", level: 95 },
   { name: "Dart", level: 85 },
   { name: "Sql", level: 95 },
+   { name: "Node Js", level: 80 },
   { name: "REST APIs", level: 80 },
   { name: "Third-party API", level: 80, apis:"Google Map,Open Street Map" },
   { name: "Firebase", level: 75 },

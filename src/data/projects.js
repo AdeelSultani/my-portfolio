@@ -1,3 +1,19 @@
+
+///SocialSphere
+import p5a from '../assets/projects/socialsphere/Login.jpeg'
+import p5b from '../assets/projects/socialsphere/signup.jpeg'
+import p5c from '../assets/projects/socialsphere/profile.jpeg'
+import p5d from '../assets/projects/socialsphere/chat1.jpeg'
+import p5e from '../assets/projects/socialsphere/chat2.jpeg'
+import p5f from '../assets/projects/socialsphere/live.jpeg'
+import p5g from '../assets/projects/socialsphere/livestream.jpeg'
+import p5h from '../assets/projects/socialsphere/hostscreen.jpeg'
+import p5i from '../assets/projects/socialsphere/audience.jpeg'
+import p5j from '../assets/projects/socialsphere/call.jpeg'
+import p5k from '../assets/projects/socialsphere/search.jpeg'
+
+
+////Whatsap Clone
 import p1a from '../assets/projects/whatsapp/calls.jpg'
 import p1b from '../assets/projects/whatsapp/onboarding.jpg'
 import p1c from '../assets/projects/whatsapp/no.jpg'
@@ -33,9 +49,18 @@ import p3j from '../assets/projects/safezone/reportverification.jpeg'
 import p3 from '../assets/hostel.jpg'
 
 const projects = [
-
-      {
+         {
     id: 1,
+    title: "Social Sphere",
+description: 
+  "A Flutter-based social media platform featuring real-time chat with Cloud Firestore, audio/video calling and live streaming using ZegoCloud SDK, and push notifications with Firebase Cloud Messaging (FCM). Users can communicate, join live sessions, and receive real-time call  alerts with ringtone support.",
+    image: p5a,
+    screenshots: [p5a,p5b,p5c,p5d,p5e,p5f,p5g,p5h,p5i,p5j,p5k],
+    githubLink: "https://github.com/AdeelSultani/Social-Sphere",
+  tags: ["Flutter", "Dart", "ZegoCloud SDk ", "Notification", "Firebase FCM","Chat App","Firebase Firestore"]
+  },
+      {
+    id: 2,
     title: "Safe Zone App",
 description: "A smart safety-focused mobile application designed to enhance personal security by detecting and analyzing nearby crime-prone areas in real time. The system uses location-based intelligence to highlight dangerous zones on the route and suggest safer alternatives when available. It features dynamic route analysis with color-coded risk visualization, emergency SOS functionality that instantly shares live location with trusted contacts, and a priority-based alert system that ensures critical notifications are delivered to family or emergency contacts first. The application aims to provide users with proactive safety guidance, quick emergency response, and real-time situational awareness while traveling.",
     image: p3a,
@@ -43,15 +68,7 @@ description: "A smart safety-focused mobile application designed to enhance pers
     githubLink: "https://github.com/AdeelSultani/Safe-Zone",
   tags: ["Flutter", "Dart", ".NET", "SQL", "Figma","Shared Preferences"]
   },
-  {
-    id: 2,
-    title: "Smart Expanse Tracker",
- description: "A Smart Expense Tracker mobile application built using Flutter with Firebase and Provider for state management. The app includes secure Firebase Authentication, real-time data syncing using Firestore and Realtime Database, and allows users to efficiently manage their daily expenses. Users can add, update, and categorize expenses while viewing real-time analytics and summaries. The app follows a clean architecture with responsive UI and smooth state handling using Provider.",
-    image: p2a,
-    screenshots: [p2a,p2b,p2c,p2d,p2e,p2f,p2g,p2h,p2i],
-    githubLink: "https://github.com/AdeelSultani/Smart-Expanse-Tracker",
-    tags: ["Flutter", "Firebase", "Provider","Sqflite"]
-  },
+ 
   {
     id: 3,
     title: "WhatsApp UI Clone",
@@ -63,7 +80,16 @@ description: "A smart safety-focused mobile application designed to enhance pers
     tags: ["Flutter", "Dart", "Figma"]
   },
    {
-    id: 3,
+    id: 4,
+    title: "Smart Expanse Tracker",
+ description: "A Smart Expense Tracker mobile application built using Flutter with Firebase and Provider for state management. The app includes secure Firebase Authentication, real-time data syncing using Firestore and Realtime Database, and allows users to efficiently manage their daily expenses. Users can add, update, and categorize expenses while viewing real-time analytics and summaries. The app follows a clean architecture with responsive UI and smooth state handling using Provider.",
+    image: p2a,
+    screenshots: [p2a,p2b,p2c,p2d,p2e,p2f,p2g,p2h,p2i],
+    githubLink: "https://github.com/AdeelSultani/Smart-Expanse-Tracker",
+    tags: ["Flutter", "Firebase", "Provider","Sqflite"]
+  },
+   {
+    id: 5,
     title: "Hostel Management System",
     description:
       "A system for managing hostel operations including student records, room allocation, and fee management in an efficient and organized way. This is a web-based Hostel Management System developed using ASP.NET (C#), Bootstrap, and SQL Server.",
