@@ -36,7 +36,7 @@ function About() {
               <span>Open to Work</span>
             </div>
           </div>
-          <a href="/resume.pdf" download className={styles.resumeBtn}>
+          <a href="/Adeel_Sultani.pdf" download className={styles.resumeBtn}>
             Download Resume
           </a>
         </div>
